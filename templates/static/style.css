@@ -85,7 +85,7 @@ html,body{
     margin: auto;
     text-align: center;
 }
-#location-address #value{
+#location-address #streetValue{
     text-align: center;
     width: 100%;
 }
