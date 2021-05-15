@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from app.latLongToAddressConverter import findAddress
+from app.latLongToAddressConverter import AddressConverter
 
 # Create your views here.
 def index(request):
@@ -7,7 +7,8 @@ def index(request):
         lat = request.POST['lat']
         lon = request.POST['lon']
 
-        streetAddress = findAddress(lat, lon)
+        addressConverter = AddressConverter()
+        streetAddress = addressConverter.findAddress(lat, lon)
         context = {'streetAddress':streetAddress}
         return render(request,'app/index.html',context)
 
