@@ -21,8 +21,8 @@
     <form action="{% url 'index' %}" method="post">
         {% csrf_token %}
         <div id="home-info">
-            <input type="number" step="0.001" name="lat" id="lat" placeholder="Enter Latitude">
-            <input type="number" step="0.001" name="lon" id="lon" placeholder="Enter Longitude">
+            <input type="number" step="0.00001" name="lat" id="lat" placeholder="Enter Latitude">
+            <input type="number" step="0.00001" name="lon" id="lon" placeholder="Enter Longitude">
             <button type="submit" id="submit">Submit</button>
         </div>
         <div id="location-address">
