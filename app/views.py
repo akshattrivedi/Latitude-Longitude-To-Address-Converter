@@ -9,7 +9,7 @@ def index(request):
 
         addressConverter = AddressConverter()
         streetAddress = addressConverter.findAddress(lat, lon)
-        context = {'streetAddress':streetAddress}
+        context = {'streetAddress':streetAddress, 'lat':lat, 'lon':lon}
         return render(request,'app/index.html',context)
 
     else:
